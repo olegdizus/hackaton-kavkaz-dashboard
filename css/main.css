@@ -8,3 +8,7 @@ html, body {
     height: 48px;
     background-color: black;
 }
+
+.layout {
+    padding-top: 20px;
+}
