@@ -12,3 +12,8 @@ html, body {
 .layout {
     padding-top: 20px;
 }
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
