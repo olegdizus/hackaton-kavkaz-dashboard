@@ -1,0 +1,11 @@
+{
+  "name": "hackaton-kavkaz-dashboard",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/olegdizus/hackaton-kavkaz-dashboard.git",
+  "author": "Oleg Dizus <olegdizus@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "3.2.0"
+  }
+}
