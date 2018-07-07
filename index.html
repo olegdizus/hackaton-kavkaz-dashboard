@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    .folded ~ tr:not(active) {
+      display: none;
+    }  
+  </style>
 </head>
 <body>
   <header class="header">
@@ -306,6 +311,7 @@
             <table class="table">
               <thead>
                 <tr>
+                  <th></th>
                   <th>
                     Номер
                   </th>
@@ -342,7 +348,10 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="active">
+                <tr class="active folded">
+                  <td>
+                    <button type="button" class="btn btn-default btn-xs fold-rows">&nbsp;+&nbsp;</button>
+                  </td>
                   <td>
                     123123
                   </td>
@@ -377,6 +386,7 @@
                   <td></td>
                   <td></td>
                   <td></td>
+                  <td></td>
                   <td>
                     Салат "Столичный"
                   </td>
@@ -393,6 +403,7 @@
                   <td></td>
                 </tr>
                 <tr>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -419,6 +430,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                     <td>
                       Шашлык из курицы
                     </td>
@@ -435,6 +447,7 @@
                     <td></td>
                 </tr>
                 <tr>
+                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -461,6 +474,7 @@
                   <td></td>
                   <td></td>
                   <td></td>
+                  <td></td>
                   <td>
                     Солянка сборная мясная
                   </td>
@@ -477,6 +491,7 @@
                   <td></td>
                 </tr>
                 <tr>
+                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -503,6 +518,7 @@
                   <td></td>
                   <td></td>
                   <td></td>
+                  <td></td>
                   <td>
                     Ассам
                   </td>
@@ -519,6 +535,7 @@
                   <td></td>
                 </tr>
                 <tr>
+                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -545,6 +562,7 @@
                   <td></td>
                   <td></td>
                   <td></td>
+                  <td></td>
                   <td>
                     Русский стандарт оригинал 50 ml
                   </td>
@@ -561,6 +579,7 @@
                   <td></td>
                 </tr>
                 <tr>
+                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -901,6 +920,11 @@
       e.preventDefault()
       $(this).tab('show')
     })
+
+    $('.fold-rows').bind('click', function () {
+      $(this).parent().parent().toggleClass('folded')
+    })
+
     $("#placeholder").bind("plothover", function (event, pos, item) {
       const datapoint = item ? item.datapoint : null
 
