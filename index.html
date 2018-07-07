@@ -7,23 +7,1150 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
-  <div class="container">
-    <header class="row">
-      
-    </header>
+  <header class="header">
+  
+  </header>
+  <div class="container layout">
     <div class="row content">
-      <div class="col-md-4 sidebar">
+
+      <div class="col-md-2 sidebar">
 
       </div>
-      <div class="col-md-8 main">
-        
+      <div class="col-md-10 main">
+        <ul class="nav nav-tabs" id="tabs">
+          <li role="presentation" class="active"><a href="#basic">Основная информация</a></li>
+          <li role="presentation"><a href="#social">Социальные сети</a></li>
+          <li role="presentation"><a href="#orders">Заказы</a></li>
+          <li role="presentation"><a href="#touches">Касания</a></li>
+          <li role="presentation"><a href="#preferences">Предпочтения</a></li>
+          <li role="presentation"><a href="#rfm">RFM-анализ</a></li>
+        </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="basic">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>Фамилия</th>
+                  <td>Иванов</td>
+                </tr>
+                <tr>
+                  <th>Имя</th>
+                  <td>Иван</td>
+                </tr>
+                <tr>
+                  <th>Отчество</th>
+                  <td>Иванович</td>
+                </tr>
+                <tr>
+                  <th>Дата рождения</th>
+                  <td>01.01.1970</td>
+                </tr>
+                <tr>
+                  <th>Дата регистрации карты клиента</th>
+                  <td>01.01.2000</td>
+                </tr>
+                <tr>
+                  <th>Город</th>
+                  <td>Ставрополь</td>
+                </tr>
+                <tr>
+                  <th>Семейный статус</th>
+                  <td>Женат</td>
+                </tr>
+                <tr>
+                  <th>Дети</th>
+                  <td>2: 1 мальчик, 5 лет; 1 девочка, 14 лет</td>
+                </tr>
+                <tr>
+                  <th>Номер телефона</th>
+                  <td><a href="tel:+79001234567" />+7 (900) 123-45-67</td>
+                </tr>
+                <tr>
+                  <th>E-mail</th>
+                  <td><a href="mailto:ivanivanov@gmail.com" />ivanivanov@gmail.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="social">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Хештеги</h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-unstyled">
+                  <li>
+                    #стейк
+                    <span class="badge">12</span>
+                  </li>
+                  <li>
+                    #вискарь
+                    <span class="badge">6</span>
+                  </li>
+                  <li>
+                    #романтика
+                    <span class="badge">4</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Упоминания заведений</h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-unstyled">
+                  <li>
+                    Кухня family
+                    <span class="badge">16</span>
+                  </li>
+                  <li>
+                    Рога-копыта
+                    <span class="badge">8</span>
+                  </li>
+                  <li>
+                    Макдак
+                    <span class="badge">2</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <img class="icon" src="img/facebook.png"/>
+                    Facebook
+                  </td>
+                  <td><a href="https//facebook.com/ivanov">Ivan Ivanov</a></td> 
+                </tr>
+                <tr>
+                  <td>
+                    <img class="icon" src="img/instagram.png"/>
+                    Instagram
+                  </td>
+                  <td><a href="https//instagram.com/ivanov">Ivan Ivanov</a></td> 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="orders">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-3">
+                    <p>
+                      <b>Всего заказов</b>
+                    </p>
+                    <p>
+                      123
+                    </p>
+                  </div>
+                  <div class="col-md-3">
+                    <p>
+                      <b>Частота посещений</b>
+                    </p>
+                    <p>
+                      Раз в две недели
+                    </p>
+                  </div>
+                  <div class="col-md-3">
+                    <p>
+                      <b>Средний чек</b>
+                    </p>
+                    <p>
+                      12000.00 
+                    </p>
+                  </div>
+                  <div class="col-md-3">
+                    <p>
+                      <b>Средняя цена блюда</b>
+                    </p>
+                    <p>
+                      650.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    Номер
+                  </th>
+                  <th>
+                    Открыт
+                  </th>
+                  <th>
+                    Закрыт
+                  </th>
+                  <th>
+                    Гостей
+                  </th>
+                  <th>
+                    Номер столика
+                  </th>
+                  <th>
+                    Наименование
+                  </th>
+                  <th>
+                    Цена
+                  </th>
+                  <th>
+                    Количество
+                  </th>
+                  <th>
+                    Сумма
+                  </th>
+                  <th>
+                    Всего
+                  </th>
+                  <th>
+                    Скидка
+                  </th>
+                  <th>
+                    Итого
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="active">
+                  <td>
+                    123123
+                  </td>
+                  <td>
+                    12:00 01.01.1970
+                  </td>
+                  <td>
+                    01:00 02.01.1970
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    5
+                  </td>
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                  <td>
+                    10550
+                  </td>
+                  <td>
+                    550
+                  </td>
+                  <td>
+                    10000
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Салат "Столичный"
+                  </td>
+                  <td>
+                    650.00
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1300.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      Картофель фри
+                    </td>
+                    <td>
+                      300.00
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      300.00
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      Шашлык из курицы
+                    </td>
+                    <td>
+                      750.00
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      1500.00
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Пельмени с мясом молодых бычков
+                  </td>
+                  <td>
+                    600.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    600.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Солянка сборная мясная
+                  </td>
+                  <td>
+                    650.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    650.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Вода "Бонаква", 0.25 л. б/г
+                  </td>
+                  <td>
+                    250.00
+                  </td>
+                  <td>
+                    4
+                  </td>
+                  <td>
+                    1000.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Ассам
+                  </td>
+                  <td>
+                    450.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    450.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Пиво светлое "Bud" 0.5 стекло
+                  </td>
+                  <td>
+                    350.00
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    700.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Русский стандарт оригинал 50 ml
+                  </td>
+                  <td>
+                    350.00
+                  </td>
+                  <td>
+                    10
+                  </td>
+                  <td>
+                    3500.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Глинтвейн классический
+                  </td>
+                  <td>
+                    550.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    550.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr class="active">
+                    <td>
+                      123123
+                    </td>
+                    <td>
+                      12:00 01.01.1970
+                    </td>
+                    <td>
+                      01:00 02.01.1970
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      5
+                    </td>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                      10550
+                    </td>
+                    <td>
+                      550
+                    </td>
+                    <td>
+                      10000
+                    </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Салат "Столичный"
+                  </td>
+                  <td>
+                    650.00
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1300.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      Картофель фри
+                    </td>
+                    <td>
+                      300.00
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      300.00
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      Шашлык из курицы
+                    </td>
+                    <td>
+                      750.00
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      1500.00
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Пельмени с мясом молодых бычков
+                  </td>
+                  <td>
+                    600.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    600.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Солянка сборная мясная
+                  </td>
+                  <td>
+                    650.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    650.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Вода "Бонаква", 0.25 л. б/г
+                  </td>
+                  <td>
+                    250.00
+                  </td>
+                  <td>
+                    4
+                  </td>
+                  <td>
+                    1000.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Ассам
+                  </td>
+                  <td>
+                    450.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    450.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Пиво светлое "Bud" 0.5 стекло
+                  </td>
+                  <td>
+                    350.00
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    700.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Русский стандарт оригинал 50 ml
+                  </td>
+                  <td>
+                    350.00
+                  </td>
+                  <td>
+                    10
+                  </td>
+                  <td>
+                    3500.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Глинтвейн классический
+                  </td>
+                  <td>
+                    550.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    550.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr class="active">
+                    <td>
+                      123123
+                    </td>
+                    <td>
+                      12:00 01.01.1970
+                    </td>
+                    <td>
+                      01:00 02.01.1970
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      5
+                    </td>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                      10550
+                    </td>
+                    <td>
+                      550
+                    </td>
+                    <td>
+                      10000
+                    </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Салат "Столичный"
+                  </td>
+                  <td>
+                    650.00
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1300.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      Картофель фри
+                    </td>
+                    <td>
+                      300.00
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      300.00
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      Шашлык из курицы
+                    </td>
+                    <td>
+                      750.00
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      1500.00
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Пельмени с мясом молодых бычков
+                  </td>
+                  <td>
+                    600.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    600.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Солянка сборная мясная
+                  </td>
+                  <td>
+                    650.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    650.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Вода "Бонаква", 0.25 л. б/г
+                  </td>
+                  <td>
+                    250.00
+                  </td>
+                  <td>
+                    4
+                  </td>
+                  <td>
+                    1000.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Ассам
+                  </td>
+                  <td>
+                    450.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    450.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Пиво светлое "Bud" 0.5 стекло
+                  </td>
+                  <td>
+                    350.00
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    700.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Русский стандарт оригинал 50 ml
+                  </td>
+                  <td>
+                    350.00
+                  </td>
+                  <td>
+                    10
+                  </td>
+                  <td>
+                    3500.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    Глинтвейн классический
+                  </td>
+                  <td>
+                    550.00
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    550.00
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="touches">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    Номер
+                  </th>
+                  <th>
+                    Дата и время
+                  </th>
+                  <th>
+                    Канал
+                  </th>
+                  <th>
+                    Повод
+                  </th>
+                  <th>
+                    Содержание
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    1212
+                  </td>
+                  <td>
+                    01.01.1970 12:00
+                  </td>
+                  <td>
+                    SMS
+                  </td>
+                  <td>
+                    Акция
+                  </td>
+                  <td>
+                    Закажи три салата — заплати за два
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    1212
+                  </td>
+                  <td>
+                    01.01.1970 12:00
+                  </td>
+                  <td>
+                    WhatsApp
+                  </td>
+                  <td>
+                    Специальное предложение
+                  </td>
+                  <td>
+                    Персональная скидка на пиво — 10%
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="preferences">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>
+                    День недели
+                  </th>
+                  <td>
+                    Пятница
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Время
+                  </th>
+                  <td>
+                    19:00-20:00
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Компания
+                  </th>
+                  <td>
+                    Вдвоем с дамой
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Любимые блюда
+                  </th>
+                  <td>
+                    <ul>
+                      <li>
+                        Стейк
+                      </li>
+                      <li>
+                        Виски Chivas regal
+                      </li>
+                      <li>
+                        Пиво Guiness
+                      </li>
+                      <li>
+                        Овощи гриль
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Любимый столик
+                  </th>
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Калорийность блюд
+                  </th>
+                  <td>
+                    Высококалорийные
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Основная группа ингредиентов
+                  </th>
+                  <td>
+                    Мясо, овощи
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Форма блюд
+                  </th>
+                  <td>
+                    Второе, алкоголь
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Сорт мяса
+                  </th>
+                  <td>
+                    Говядина
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Регион кухни
+                  </th>
+                  <td>
+                    Американская, европейская
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Объем порции
+                  </th>
+                  <td>
+                    Большие
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Сорт алкоголя
+                  </th>
+                  <td>
+                    Виски, пиво
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="index.js" />
 </body>
 </html>
