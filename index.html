@@ -18,7 +18,8 @@
 
       <div class="col-md-2 sidebar">
           <div>
-            <img width="140px" src="img/abama.jpg" alt="..." class="img-circle">
+            <img width="130px" src="img/abama.jpg" alt="..." class="img-circle">
+            <div class="hb"></div>
           </div>
         <hr>
         <div><strong>Иванов Иван</strong></div>
@@ -201,103 +202,37 @@
                 </table>
               </div>
             </div>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td>
-                    <img class="icon" src="img/facebook.png"/>
-                    Facebook
-                  </td>
-                  <td><a href="https//facebook.com/ivanov">Ivan Ivanov</a></td> 
-                </tr>
-                <tr>
-                  <td>
-                    <img class="icon" src="img/instagram.png"/>
-                    Instagram
-                  </td>
-                  <td><a href="https//instagram.com/ivanov">Ivan Ivanov</a></td> 
-                </tr>
-              </tbody>
-            </table>
+
           </div>
           <div role="tabpanel" class="tab-pane" id="orders">
             <div class="panel panel-default">
               <div class="panel-body">
                 <div class="row">
-                  <div class="col-md-2">
-                    <p>
-                      <b>Частота посещений</b>
-                    </p>
-                    <p>
-                      Раз в две недели
-                    </p>
-                  </div>
-                  <div class="col-md-2">
-
-                    <p>
-                      <b>Средний чек</b>
-                    </p>
-                    <p>
-                      12000.00 
-                    </p>
-                  </div>
                   <div class="col-md-3">
+                    <div><b>Частота посещений</b></div>
+                    <span class="label label-success">Раз в две недели</span>
 
-                    <p>
-                      <b>Средняя цена блюда</b>
-                    </p>
-                    <p>
-                      650.00
-                    </p>
                   </div>
-                  <div class="col-md-5">
-                    <p>
-                      <b>Самые дорогие блюда</b>
-                    </p>
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td>
-                            Шашлык из курицы
-                          </td>
-                          <td>
-                            <strong>750.00</strong>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Салат столичный
-                          </td>
-                          <td>
-                            <strong>650.00</strong>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Солянка сборная мясная
-                          </td>
-                          <td>
-                            <strong>650.00</strong>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Пельмени с мясом молодых бычков
-                          </td>
-                          <td>
-                            <strong>600.00</strong>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Глинтвейн классический
-                          </td>
-                          <td>
-                            <strong>550.00</strong>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="col-md-2">
+                    <div><b>Средний чек</b></div>
+                    <span class="label label-success">12000 руб</span>
+
+                  </div>
+
+                  <div class="col-md-4">
+                    <div>
+                      <b>Средняя ТОП 5 блюд:</b>
+                      <span class="label label-success">850 руб</span>
+                    </div>
+                    <div>
+                      <b>Средняя цена блюда:</b>
+                      <span class="label label-success">650 руб</span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div><b>Самое дорогое блюдо:</b></div>
+                    <span class="label label-success">Шашлык из семги: 1500 руб</span>
                   </div>
                 </div>
               </div>
@@ -338,6 +273,9 @@
                   <th>
                     Итого
                   </th>
+                  <th>
+
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -369,6 +307,50 @@
                   <td>
                     10000
                   </td>
+                  <td>
+
+                    <div class="row">
+                      <div class="col-md-2">
+                        <a href="#" data-toggle="modal" data-target=".instagram-modal-sm">
+                          <img class="icon-16" src="img/instagram.png"/>
+                        </a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#"><img class="icon-16" src="img/facebook.png"/></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#"><img class="icon-16" width="24px" src="img/vk.png"/></a>
+                      </div>
+                    </div>
+                    <div class="modal fade instagram-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Упоминания в Instagramm</h4>
+                          </div>
+                          <div class="modal-body">
+                           <span>
+                          <a href="#">#уютнаяатмосфера</a>
+                          <span class="badge">14</span>
+                        </span>,
+                            <span>
+                          <a href="#">#шефбог</a>
+                          <span class="badge">11</span>,
+                        </span>
+                            <span>
+                          <a href="#">#немогунежратьпослешести</a>
+                          <span class="badge">9</span>
+                        </span>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+
                 </tr>
                 <tr>
                   <td></td>
@@ -584,6 +566,38 @@
             </table>
           </div>
           <div role="tabpanel" class="tab-pane" id="touches">
+            <h2>Эффективность каналов касаний</h2>
+            <table class="table">
+              <thead>
+              <tr>
+                <th>Канал</th>
+                <th>Количесво касаний</th>
+                <th>Количесво попаданий</th>
+                <th>Процент попаданий</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>WhatsApp</td>
+                <td><span class="label label-default">12</span></td>
+                <td><span class="label label-default">6</span></td>
+                <td><span class="label label-success">50%</span></td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td><span class="label label-default">20</span></td>
+                <td><span class="label label-default">1</span></td>
+                <td><span class="label label-warning">5%</span></td>
+              </tr>
+              <tr>
+                <td>SMS</td>
+                <td><span class="label label-default">20</span></td>
+                <td><span class="label label-default">0</span></td>
+                <td><span class="label label-danger">0%</span></td>
+              </tr>
+              </tbody>
+            </table>
+            <h2>Касания</h2>
             <table class="table">
               <thead>
                 <tr>
@@ -602,12 +616,15 @@
                   <th>
                     Содержание
                   </th>
+                  <th>
+                    Дата визита
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>
-                    1212
+                    1211
                   </td>
                   <td>
                     01.01.1970 12:00
@@ -621,6 +638,7 @@
                   <td>
                     Закажи три салата — заплати за два
                   </td>
+                  <td><span class="label label-success">01.01.1970 12:00</span></td>
                 </tr>
                 <tr>
                   <td>
@@ -631,6 +649,23 @@
                   </td>
                   <td>
                     WhatsApp
+                  </td>
+                  <td>
+                    Специальное предложение
+                  </td>
+                  <td>
+                    Персональная скидка на пиво — 10%
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    1212
+                  </td>
+                  <td>
+                    01.01.2018 13:00
+                  </td>
+                  <td>
+                    Email
                   </td>
                   <td>
                     Специальное предложение
