@@ -43,6 +43,7 @@
           <li role="presentation"><a href="#social">Социальные сети</a></li>
           <li role="presentation"><a href="#orders">Заказы <span class="badge">123</span></a></li>
           <li role="presentation"><a href="#touches">Касания <span class="badge">56</span></a></li>
+          <li role="presentation"><a href="#chart">График посещений и касаний</a></li>
           <li role="presentation"><a href="#preferences">Предпочтения</a></li>
           <li role="presentation"><a href="#rfm">RFM-анализ</a></li>
         </ul>
@@ -756,17 +757,96 @@
               </tbody>
             </table>
           </div>
+          <div class="tab-pane" id="chart">
+              <div id="placeholder" style="width:600px;height:300px"></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.time.min.js"></script>
   <script>
     $('#tabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')
     })
+    $("#placeholder").bind("plothover", function (event, pos, item) {
+      const datapoint = item ? item.datapoint : null
+
+      if (datapoint) {
+          console.log("You clicked a point!", datapoint);
+      }
+    });
+
+    const initialData = [
+      [1, 1, "01 Jan 2016 00:00:00 GMT"],
+      [3, 1, "01 Apr 2016 00:00:00 GMT"],
+      [4, 8, "01 Jul 2016 00:00:00 GMT"],
+      [2, 12, "01 Oct 2016 00:00:00 GMT"],
+      [3, 4, "01 Jan 2017 00:00:00 GMT"],
+      [5, 14, "01 Apr 2017 00:00:00 GMT"],
+      [6, 13, "01 Jul 2017 00:00:00 GMT"],
+      [7, 11, "01 Oct 2017 00:00:00 GMT"]
+    ]
+
+    const ordersData = initialData.map(([,orderCount, date]) => [Date.parse(date), orderCount])
+
+    const touchesData = initialData.map(([touchesCount,,date]) => [Date.parse(date), touchesCount])
+
+    const orders = {
+      label: 'Заказы',
+      points: {
+        show: true,
+        fillColor: '#32CD32'
+      },
+      lines: {
+        show: true,
+      },
+      shadowSize: 0,
+      data: ordersData
+    }
+
+    const touches = {
+      label: 'Касания',
+      bars: {
+        show: true,
+        zero: false,
+        align: 'center'
+      },
+      data: touchesData
+    }
+
+    const data = [orders, touches]
+
+    const options = {
+      xaxis: {
+        mode: 'time',
+        timeformat: '%q квартал %Y'
+      },
+      colors: ['#32CD32', '#1E90FF'],
+      grid: {
+        borderWidth: {
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 1
+        },
+        borderColor: 'lightgray',
+        axisMargin: 1000,
+        labelMargin: 20,
+        hoverable: true,
+        autoHightLight: true
+      },
+      legend: {
+        show: true
+      }
+    }
+
+    $.plot($("#placeholder"), data, options);
+
   </script>
 </body>
 </html>
