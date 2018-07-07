@@ -24,6 +24,7 @@
         <div><strong>Иванов Иван</strong></div>
         <div><strong>Карта:</strong> 00000434</div>
         <div><strong>Баланс:</strong> 1500</div>
+        <div><strong>RFM:</strong> 445</div>
         <hr>
         <div class="row">
           <div class="col-md-2">
@@ -760,6 +761,133 @@
           <div class="tab-pane" id="chart">
               <div id="placeholder" style="width:600px;height:300px"></div>
           </div>
+          <div class="tab-pane" id="rfm">
+            <div id="rfm-chart" style="width:600px;height:300px;margin-bottom: 60px"></div>
+            <table class="table">
+              <thead>
+                <th>
+                  Дата
+                </th>
+                <th>
+                  R
+                </th>
+                <th>
+                  F
+                </th>
+                <th>
+                  M
+                </th>
+                <th>
+                  RFM
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    01.01.2016
+                  </td>
+                  <td title="Давность">
+                    4
+                  </td>
+                  <td title="Частота">
+                    3
+                  </td>
+                  <td title="Деньги">
+                    4
+                  </td>
+                  <td>
+                    434
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    01.04.2016
+                  </td>
+                  <td title="Давность">
+                    5
+                  </td>
+                  <td title="Частота">
+                    2
+                  </td>
+                  <td title="Деньги">
+                    5
+                  </td>
+                  <td>
+                    525
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    01.07.2016
+                  </td>
+                  <td title="Давность">
+                    4
+                  </td>
+                  <td title="Частота">
+                    4
+                  </td>
+                  <td title="Деньги">
+                    4
+                  </td>
+                  <td>
+                    444
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    01.10.2016
+                  </td>
+                  <td title="Давность">
+                    3
+                  </td>
+                  <td title="Частота">
+                    4
+                  </td>
+                  <td title="Деньги">
+                    4
+                  </td>
+                  <td>
+                    344
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    01.01.2017
+                  </td>
+                  <td title="Давность">
+                    3
+                  </td>
+                  <td title="Частота">
+                    4
+                  </td>
+                  <td title="Деньги">
+                    5
+                  </td>
+                  <td>
+                    345
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    01.04.2017
+                  </td>
+                  <td title="Давность">
+                    4
+                  </td>
+                  <td title="Частота">
+                    4
+                  </td>
+                  <td title="Деньги">
+                    5
+                  </td>
+                  <td>
+                    445
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -792,9 +920,9 @@
       [7, 16, "01 Oct 2017 00:00:00 GMT"]
     ]
 
-    const ordersData = initialData.map(([,orderCount, date]) => [Date.parse(date), orderCount])
+    const ordersTransformedData = initialData.map(([,orderCount, date]) => [Date.parse(date), orderCount])
 
-    const touchesData = initialData.map(([touchesCount,,date]) => [Date.parse(date), touchesCount])
+    const touchesTransformedData = initialData.map(([touchesCount,,date]) => [Date.parse(date), touchesCount])
 
     const orders = {
       label: 'Заказы',
@@ -806,7 +934,7 @@
         show: true,
       },
       shadowSize: 0,
-      data: ordersData
+      data: ordersTransformedData
     }
 
     const touches = {
@@ -816,12 +944,12 @@
         zero: false,
         align: 'center'
       },
-      data: touchesData
+      data: touchesTransformedData
     }
 
-    const data = [orders, touches]
+    const ordersData = [orders, touches]
 
-    const options = {
+    const ordersOptions = {
       xaxis: {
         mode: 'time',
         timeformat: '%q квартал %Y'
@@ -845,7 +973,57 @@
       }
     }
 
-    $.plot($("#placeholder"), data, options);
+    $.plot($("#placeholder"), ordersData, ordersOptions);
+
+    const rfmRawData = [
+      ["01 Jan 2016 00:00:00 GMT", 434],
+      ["01 Apr 2016 00:00:00 GMT", 525],
+      ["01 Jul 2016 00:00:00 GMT", 444],
+      ["01 Oct 2016 00:00:00 GMT", 344],
+      ["01 Jan 2017 00:00:00 GMT", 345],
+      ["01 Apr 2017 00:00:00 GMT", 445],
+    ]
+
+    const rfmTransformedData = rfmRawData.map(([date, rfm]) => [Date.parse(date), rfm])
+
+    const rfmData = {
+      label: 'RFM',
+      points: {
+        show: true,
+        fillColor: '#32CD32'
+      },
+      lines: {
+        show: true,
+      },
+      shadowSize: 0,
+      data: rfmTransformedData
+    }
+
+    const rfmOptions = {
+      xaxis: {
+        mode: 'time',
+        timeformat: '%q квартал %Y'
+      },
+      colors: ['#32CD32', '#1E90FF'],
+      grid: {
+        borderWidth: {
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 1
+        },
+        borderColor: 'lightgray',
+        axisMargin: 1000,
+        labelMargin: 20,
+        hoverable: true,
+        autoHightLight: true
+      },
+      legend: {
+        show: true
+      }
+    }
+
+    $.plot($('#rfm-chart'), [rfmData], rfmOptions)
 
   </script>
 </body>
